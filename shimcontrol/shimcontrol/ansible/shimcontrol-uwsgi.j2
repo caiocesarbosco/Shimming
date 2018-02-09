@@ -1,0 +1,11 @@
+[Unit]
+Description=Shimcontrol uWSGI service
+After=network.target
+
+[Service]
+EnvironmentFile=-/etc/default/shimcontrol
+ExecStart=/usr/share/ciermag/shimcontrol-env/bin/uwsgi --ini uwsgi.ini
+WorkingDirectory=/usr/share/ciermag/shimcontrol
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,4 @@
+conserta servidor uwsgi
+
+(e adiciona um '*' no ALLOWED_HOSTS, o que é passível de punição pesada)
+

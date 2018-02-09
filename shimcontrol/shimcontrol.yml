@@ -1,0 +1,104 @@
+---
+- name: Install Shimcontrol
+  hosts: raspberrypi
+  gather_facts: no
+  handlers:
+    - name: restart uwsgi
+      service:
+        name: shimcontrol-uwsgi
+        state: restarted
+  tasks:
+    - name: Ensure SPI is enabled in the boot config
+      lineinfile:
+        dest: /boot/config.txt
+        line: dtparam=spi=on
+      register: boot_config
+
+    - name: Restart Pi to apply boot config changes
+      command: reboot
+      async: 1
+      poll: 0
+      ignore_errors: true
+      when: "{{boot_config.changed}}"
+
+    - name: Wait for ssh to come back
+      local_action: wait_for
+      args:
+        port: 22
+        host: "{{ansible_host | default(inventory_hostname)}}"
+        search_regex: OpenSSH
+        delay: 10
+      when: "{{boot_config.changed}}"
+
+    - name: Ensure the SPI kernel module is present
+      modprobe:
+        name: spi-bcm2835
+        state: present
+
+    - name: Gather info on SPI device files
+      stat:
+        path: "{{item}}"
+      with_items:
+        - /dev/spidev0.0
+        - /dev/spidev0.1
+      register: spi_dev_stat
+
+    - name: Ensure the SPI device files exist
+      fail:
+        msg: "Missing SPI device file {{item.item}}"
+      when: "{{not item.stat.exists}}"
+      with_items: "{{spi_dev_stat.results}}"
+
+    - name: Ensure rsync is present on the Pi
+      apt:
+        name: rsync
+
+    - name: Copy shimcontrol files to Pi
+      synchronize:
+        src: ./
+        dest: /usr/share/ciermag/shimcontrol/
+      notify:
+        - restart uwsgi
+      tags: shimcontrol.files
+
+    - name: Install Python 3 and Virtualenv
+      apt:
+        name: "{{item}}"
+        update_cache: yes
+      with_items:
+        - python3
+        - python3-dev
+        - python-virtualenv
+
+    - name: Install shimcontrol dependencies
+      pip:
+        requirements: /usr/share/ciermag/shimcontrol/requirements.txt
+        virtualenv: /usr/share/ciermag/shimcontrol-env
+        virtualenv_python: python3
+
+    - name: Install shimcontrol ui environment file
+      template:
+        src: ansible/shimcontrol-env.j2
+        dest: /etc/default/shimcontrol
+        mode: 0400
+      notify:
+        - restart uwsgi
+
+    - name: Install shimcontrol ui systemd service unit
+      template:
+        src: ansible/shimcontrol-uwsgi.j2
+        dest: /etc/systemd/system/shimcontrol-uwsgi.service
+        mode: 0644
+      register: service_unit
+      notify:
+        - restart uwsgi
+
+    - name: Reload systemd configuration
+      command: systemctl daemon-reload
+      when: service_unit | changed
+
+    - name: Start and enable the shimcontrol service
+      service:
+        name: shimcontrol-uwsgi
+        state: started
+        enabled: yes

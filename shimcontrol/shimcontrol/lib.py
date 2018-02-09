@@ -1,0 +1,276 @@
+from itertools import chain, groupby
+from operator import attrgetter
+import atexit
+import contextlib
+import random
+import time
+
+from RPi import GPIO
+import spidev
+
+
+# isso é global porque eu ainda não tenho um lugar pra inicializar o uso
+# dessas coisas, então por hora vai aqui...
+ADC_GPIO_CHANNELS = [2, 3, 4]
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(ADC_GPIO_CHANNELS, GPIO.OUT)
+atexit.register(GPIO.cleanup)
+
+
+@contextlib.contextmanager
+def open_spi(bus, device):
+    spi = spidev.SpiDev()
+    spi.open(bus, device)
+
+    yield spi
+
+    spi.close()
+
+
+@contextlib.contextmanager
+def open_dac():
+    with open_spi(0, 0) as spi:
+        yield spi
+
+
+@contextlib.contextmanager
+def open_adc():
+    with open_spi(0, 1) as spi:
+        yield spi
+
+def dac_code_to_voltage(code):
+    return - 4.096 + (2 * 4.096) * (code / float(0xffff))
+
+
+def enable_adc_module(index):
+    bits = '{:03b}'.format(index)
+    values = [GPIO.HIGH if b == '1' else GPIO.LOW for b in bits]
+
+    GPIO.output(ADC_GPIO_CHANNELS, values)
+
+
+def get_adc_modules():
+    modules = []
+
+    with open_adc() as adc:
+        for index in range(5):
+            enable_adc_module(index)
+
+            # testa 5 valores aleatórios, deve ser o suficiente pra evitar
+            # erros de muito azar
+            for _ in range(5):
+                command = [0b10000000, random.randint(0x0000, 0xffff)]
+                result = adc.xfer2(command)
+
+                if result != command:
+                    break
+            else:
+                modules.append(index)
+
+    return modules
+
+class DACCommand:
+    def serialize(self, dacs_available):
+        raise NotImplementedError
+
+
+class DACNop(DACCommand):
+    def serialize(self, dacs_available):
+        return [0xaa, 0xff, 0xaa, 0xaa]
+
+    def __eq__(self, other):
+        return isinstance(other, DACNop)
+
+    def __str__(self):
+        return '<DACNop>'
+
+    def __repr__(self):
+        return self.__str__()
+
+
+class DACWrite(DACCommand):
+    def __init__(self, channel, value, update=True):
+        self.channel = channel
+        self.value = value
+        self.update = update
+
+    @property
+    def dac(self):
+        return self.channel // 8
+
+    def serialize(self, dacs_available):
+        max_channel = dacs_available * 8 - 1
+
+        if self.channel < 0 or self.channel > max_channel:
+            raise ValueError('Invalid channel: {}'.format(self.channel))
+
+        if self.value < 0 or self.value > 0xffff:
+            raise ValueError('Invalid value: {}'.format(self.value))
+
+        value_bytes = list(self.value.to_bytes(2, 'big'))
+        selector = 0b00000000
+
+        if self.update:
+            selector |= 0b00110000
+        selector |= self.channel % 0b1000
+
+        return [0xaa, selector] + value_bytes
+
+    def __str__(self):
+        desc = '<DACWrite(channel={:02d}, value=0x{:04x})>'
+        return desc.format(self.channel, self.value)
+
+    def __repr__(self):
+        return self.__str__()
+
+    def __eq__(self, other):
+        return (
+            self.channel == other.channel and
+            self.value == other.value and
+            self.update == other.update
+        )
+
+
+class DACCommandSet:
+    def __init__(self, dacs_available, commands=None, groups=None):
+        if groups and commands:
+            raise TypeError("Can't specify both commands and groups")
+
+        self.dacs_available = dacs_available
+        self.commands = commands
+        self.groups = groups
+
+    def from_write(self, values):
+        self.commands = []
+        self.groups = []
+
+        operations = sorted(
+            map(lambda x: DACWrite(*x), values),
+            key=attrgetter('dac', 'value')
+        )
+
+        while operations:
+            # faz cópia da lista porque a original vai ser alterada
+            ops_group = groupby(list(operations), key=attrgetter('dac'))
+
+            group = []
+            for dac, dac_operations in ops_group:
+                operation = next(dac_operations)
+                operations.remove(operation)
+                group.append(operation)
+            self.groups.append(group)
+
+        return self.serialize()
+
+    def serialize(self):
+        if self.commands:
+            return self.commands
+
+        self.commands = []
+
+        for group in self.groups:
+            command_group = []
+            for dac in range(self.dacs_available):
+                # isso tem função parecida com um find_if do c++
+                command = next((x for x in group if x.dac == dac), DACNop())
+
+                if not isinstance(command, DACCommand):
+                    raise TypeError("Command is not a DACCommand")
+
+                command_group.append(command)
+            self.commands.append(command_group)
+
+        return self.commands
+
+    def execute(self):
+        with open_dac() as dac:
+            for group in self.commands:
+                serialized = [
+                    command.serialize(self.dacs_available)
+                    for command in reversed(group)
+                ]
+                # achata a lista com os comandos serializados
+                flattened = chain.from_iterable(serialized)
+
+                dac.xfer2(list(flattened))
+
+class ADCCommand:
+    def serialize(self, adcs_available):
+        raise NotImplementedError
+
+class ADCRead(ADCCommand):
+    def __init__(self, channel):
+        self.channel = channel
+
+    @property
+    def adc(self):
+        return self.channel // 8
+
+    def serialize(self, adcs_available):
+        max_channel = adcs_available * 8 - 1
+
+        if self.channel < 0 or self.channel > max_channel:
+            raise ValueError('Invalid channel: {}'.format(self.channel))
+
+        selector = 0b10000000
+        selector |= (self.channel % 0b1000) << 4
+
+        return [selector, 0xaa]
+
+    def __str__(self):
+        desc = '<ADCRead(channel={:02d})>'
+        return desc.format(self.channel)
+
+    def __repr__(self):
+        return self.__str__()
+
+    def __eq__(self, other):
+        return (
+            self.channel == other.channel
+        )
+
+class ADCCommandSet:
+    def __init__(self, adcs_available, commands=None):
+        self.adcs_available = adcs_available
+        self.commands = commands
+
+    def from_read(self, channels):
+        operations = sorted(
+            [ADCRead(channel) for channel in channels],
+            key=attrgetter('adc', 'channel')
+        )
+
+        self.commands = operations
+
+    def execute(self):
+        results = []
+
+        with open_adc() as adc:
+            for command in self.commands:
+                enable_adc_module(command.adc)
+
+                cmd = command.serialize(self.adcs_available)
+
+                # pede pra fazer a leitura
+                adc.xfer2(cmd)
+                # espera até 5us pra pedir o dado, tempo máximo de conversão
+                start = time.perf_counter()
+                while time.perf_counter() - start < 5e-6:
+                    pass
+                # o segundo comando retorna a tensão lida no primeiro
+                result = int.from_bytes(
+                    bytes(adc.xfer2(cmd)),
+                    byteorder='big',
+                    signed=True
+                )
+
+                # converte a leitura pra tensão de verdade
+                result_normalized = (result - (-0x8000)) / float(0xffff)
+                voltage = -10.0 + result_normalized * 20.0
+
+                results.append((command.channel, voltage))
+
+        return results
+
+

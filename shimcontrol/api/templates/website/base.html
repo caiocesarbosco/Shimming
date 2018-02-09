@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shimming Controller Status</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.2/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.2/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="react-body"></div>
+    <script type="text/babel">
+      class MeuComponente extends React.Component {
+        render() {
+          return <h1>Componente DAORA</h1>;
+        }
+      }
+      ReactDOM.render(
+        <div>
+          <MeuComponente />
+        </div>,
+        document.getElementById('react-body')
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+[raspberrypi]
+raspberrypi.local ansible_user=root
+
+#10.42.0.116 ansible_user=root

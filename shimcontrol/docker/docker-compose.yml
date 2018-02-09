@@ -1,0 +1,12 @@
+version: '2'
+services:
+  django:
+    build:
+      context: ..
+    environment:
+      DEBUG: 'TRUE'
+      SECRET_KEY: 'chave-super-secreta'
+    ports:
+      - '80:8000'
+    volumes:
+      - ../:/usr/share/shimcontrolui

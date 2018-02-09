@@ -1,0 +1,7 @@
+spidev<3.2
+RPi.GPIO<0.7
+tabulate<0.8
+Django<1.9
+flake8<2.6
+djangorestframework<3.4
+uWSGI<2.1

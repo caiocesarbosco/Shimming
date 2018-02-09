@@ -1,0 +1,466 @@
+2016/07/27 15:00:08 fcoelho> st
+2016/07/27 15:00:08 fcoelho> st exited 0 after 0.37 seconds
+2016/07/27 15:00:10 fcoelho> diff
+2016/07/27 15:00:10 fcoelho> diff exited 0 after 0.17 seconds
+2016/07/27 15:00:14 fcoelho> log
+2016/07/27 15:00:14 fcoelho> writing .hg/cache/tags2-visible with 0 tags
+2016/07/27 15:00:14 fcoelho> log exited 0 after 0.09 seconds
+2016/07/27 15:00:20 fcoelho> push
+2016/07/27 15:00:27 fcoelho> push exited True after 7.31 seconds
+2016/08/05 11:30:18 fcoelho> st
+2016/08/05 11:30:18 fcoelho> st exited 0 after 0.28 seconds
+2016/08/05 11:30:20 fcoelho> diff
+2016/08/05 11:30:20 fcoelho> diff exited 0 after 0.14 seconds
+2016/08/05 11:37:02 fcoelho> st
+2016/08/05 11:37:02 fcoelho> st exited 0 after 0.03 seconds
+2016/08/05 11:37:07 fcoelho> showconfig alias.add
+2016/08/05 11:37:07 fcoelho> showconfig alias.add exited 1 after 0.02 seconds
+2016/08/05 11:37:07 fcoelho> status -nu glob:shi**
+2016/08/05 11:37:07 fcoelho> status -nu glob:shi** exited 0 after 0.03 seconds
+2016/08/05 11:37:08 fcoelho> showconfig alias.add
+2016/08/05 11:37:08 fcoelho> showconfig alias.add exited 1 after 0.02 seconds
+2016/08/05 11:37:08 fcoelho> status -nu glob:shim**
+2016/08/05 11:37:08 fcoelho> status -nu glob:shim** exited 0 after 0.03 seconds
+2016/08/05 11:37:09 fcoelho> showconfig alias.add
+2016/08/05 11:37:09 fcoelho> showconfig alias.add exited 1 after 0.02 seconds
+2016/08/05 11:37:09 fcoelho> status -nu glob:tes**
+2016/08/05 11:37:09 fcoelho> status -nu glob:tes** exited 0 after 0.03 seconds
+2016/08/05 11:37:09 fcoelho> add test.py
+2016/08/05 11:37:09 fcoelho> add test.py exited 0 after 0.04 seconds
+2016/08/05 11:37:12 fcoelho> diff
+2016/08/05 11:37:12 fcoelho> diff exited 0 after 0.05 seconds
+2016/08/05 11:37:23 fcoelho> ci -m 'Adiciona testes b\xc3\xa1sicos pros DACs'
+2016/08/05 11:37:23 fcoelho> updated served branch cache in 0.0261 seconds
+2016/08/05 11:37:23 fcoelho> wrote served branch cache with 1 labels and 1 nodes
+2016/08/05 11:37:23 fcoelho> ci -m 'Adiciona testes b\xc3\xa1sicos pros DACs' exited 0 after 0.18 seconds
+2016/08/05 11:37:25 fcoelho> st
+2016/08/05 11:37:25 fcoelho> st exited 0 after 0.03 seconds
+2016/08/05 11:50:20 fcoelho> st
+2016/08/05 11:50:20 fcoelho> st exited 0 after 0.03 seconds
+2016/08/05 11:50:23 fcoelho> diff
+2016/08/05 11:50:23 fcoelho> diff exited 0 after 0.04 seconds
+2016/08/05 11:50:38 fcoelho> ci -m 'Envia cada grupo de comandos como uma transa\xc3\xa7\xc3\xa3o separada'
+2016/08/05 11:50:38 fcoelho> updated served branch cache in 0.0009 seconds
+2016/08/05 11:50:38 fcoelho> wrote served branch cache with 1 labels and 1 nodes
+2016/08/05 11:50:38 fcoelho> ci -m 'Envia cada grupo de comandos como uma transa\xc3\xa7\xc3\xa3o separada' exited 0 after 0.04 seconds
+2016/08/22 18:59:08 fcoelho> st
+2016/08/22 18:59:08 fcoelho> st exited 0 after 0.29 seconds
+2016/08/22 20:16:15 fcoelho> st
+2016/08/22 20:16:15 fcoelho> st exited 0 after 0.03 seconds
+2016/08/22 20:16:25 fcoelho> add .
+2016/08/22 20:16:25 fcoelho> add . exited 0 after 0.03 seconds
+2016/08/22 20:16:26 fcoelho> st
+2016/08/22 20:16:26 fcoelho> st exited 0 after 0.03 seconds
+2016/08/22 20:16:28 fcoelho> st
+2016/08/22 20:16:28 fcoelho> st exited 0 after 0.03 seconds
+2016/08/22 20:16:30 fcoelho> diff
+2016/08/22 20:16:30 fcoelho> diff exited 0 after 0.17 seconds
+2016/08/22 20:16:44 fcoelho> ci -m 'adiciona comandos ad'
+2016/08/22 20:16:44 fcoelho> updated served branch cache in 0.0204 seconds
+2016/08/22 20:16:44 fcoelho> wrote served branch cache with 1 labels and 1 nodes
+2016/08/22 20:16:44 fcoelho> ci -m 'adiciona comandos ad' exited 0 after 0.11 seconds
+2016/08/22 20:16:48 fcoelho> push
+2016/08/22 20:16:59 fcoelho> updated None branch cache in 0.0007 seconds
+2016/08/22 20:16:59 fcoelho> push exited -1 after 11.49 seconds
+2016/08/22 21:35:12 fcoelho> st
+2016/08/22 21:35:12 fcoelho> st exited 0 after 0.03 seconds
+2016/08/22 21:35:14 fcoelho> diff
+2016/08/22 21:35:14 fcoelho> diff exited 0 after 0.05 seconds
+2016/08/22 21:35:28 fcoelho> ci -m 'adiciona comando do adc de verdade'
+2016/08/22 21:35:28 fcoelho> updated served branch cache in 0.0008 seconds
+2016/08/22 21:35:28 fcoelho> wrote served branch cache with 1 labels and 1 nodes
+2016/08/22 21:35:28 fcoelho> ci -m 'adiciona comando do adc de verdade' exited 0 after 0.04 seconds
+2016/08/22 21:35:30 fcoelho> push
+2016/08/22 21:35:41 fcoelho> updated None branch cache in 0.0005 seconds
+2016/08/22 21:35:44 fcoelho> push exited 0 after 14.09 seconds
+2016/08/22 21:41:42 fcoelho> st
+2016/08/22 21:41:42 fcoelho> st exited 0 after 0.09 seconds
+2016/08/22 21:41:44 fcoelho> diff
+2016/08/22 21:41:44 fcoelho> diff exited 0 after 0.05 seconds
+2016/08/22 21:41:59 fcoelho> ci -m 'serializa de acordo com a quantidade de ADCs dispon\xc3\xadveis'
+2016/08/22 21:41:59 fcoelho> updated served branch cache in 0.0017 seconds
+2016/08/22 21:41:59 fcoelho> wrote served branch cache with 1 labels and 1 nodes
+2016/08/22 21:41:59 fcoelho> ci -m 'serializa de acordo com a quantidade de ADCs dispon\xc3\xadveis' exited 0 after 0.05 seconds
+2016/08/25 17:02:29 fcoelho> st
+2016/08/25 17:02:29 fcoelho> st exited 0 after 0.05 seconds
+2016/08/25 17:02:31 fcoelho> diff
+2016/08/25 17:02:31 fcoelho> diff exited 0 after 0.08 seconds
+2016/08/25 17:07:08 fcoelho> diff
+2016/08/25 17:07:08 fcoelho> diff exited 0 after 0.05 seconds
+2016/08/25 17:07:14 fcoelho> showconfig alias.ci
+2016/08/25 17:07:14 fcoelho> showconfig alias.ci exited 1 after 0.02 seconds
+2016/08/25 17:07:14 fcoelho> status -nmar glob:ansi**
+2016/08/25 17:07:14 fcoelho> status -nmar glob:ansi** exited 0 after 0.03 seconds
+2016/08/25 17:07:15 fcoelho> ci ansible/shimcontrol.yml
+2016/08/25 17:07:25 fcoelho> updated served branch cache in 0.0210 seconds
+2016/08/25 17:07:25 fcoelho> wrote served branch cache with 1 labels and 1 nodes
+2016/08/25 17:07:25 fcoelho> ci ansible/shimcontrol.yml exited 0 after 10.73 seconds
+2016/08/25 17:07:27 fcoelho> st
+2016/08/25 17:07:27 fcoelho> st exited 0 after 0.03 seconds
+2016/08/25 17:07:29 fcoelho> diff
+2016/08/25 17:07:29 fcoelho> diff exited 0 after 0.05 seconds
+2016/08/25 17:07:46 fcoelho> ci -m 'adiciona comando do cli para ler valores do adc'
+2016/08/25 17:07:46 fcoelho> updated served branch cache in 0.0008 seconds
+2016/08/25 17:07:46 fcoelho> wrote served branch cache with 1 labels and 1 nodes
+2016/08/25 17:07:46 fcoelho> ci -m 'adiciona comando do cli para ler valores do adc' exited 0 after 0.05 seconds
+2016/08/25 17:07:49 fcoelho> push
+2016/08/25 17:08:00 fcoelho> updated None branch cache in 0.0005 seconds
+2016/08/25 17:08:00 fcoelho> push exited -1 after 11.32 seconds
+2016/08/25 17:08:01 fcoelho> push
+2016/08/25 17:08:13 fcoelho> updated None branch cache in 0.0006 seconds
+2016/08/25 17:08:15 fcoelho> push exited 0 after 13.63 seconds
+2016/08/25 17:12:07 fcoelho> st
+2016/08/25 17:12:07 fcoelho> st exited 0 after 0.04 seconds
+2016/08/25 18:11:21 fcoelho> st
+2016/08/25 18:11:21 fcoelho> st exited 0 after 0.03 seconds
+2016/08/25 18:11:22 fcoelho> diff
+2016/08/25 18:11:22 fcoelho> diff exited 0 after 0.04 seconds
+2016/08/25 18:11:26 fcoelho> showconfig alias.add
+2016/08/25 18:11:26 fcoelho> showconfig alias.add exited 1 after 0.02 seconds
+2016/08/25 18:11:26 fcoelho> status -nu glob:ci**
+2016/08/25 18:11:26 fcoelho> status -nu glob:ci** exited 0 after 0.03 seconds
+2016/08/25 18:11:27 fcoelho> showconfig alias.add
+2016/08/25 18:11:27 fcoelho> showconfig alias.add exited 1 after 0.02 seconds
+2016/08/25 18:11:27 fcoelho> status -nu glob:shi**
+2016/08/25 18:11:27 fcoelho> status -nu glob:shi** exited 0 after 0.03 seconds
+2016/08/25 18:11:31 fcoelho> showconfig alias.add
+2016/08/25 18:11:31 fcoelho> showconfig alias.add exited 1 after 0.02 seconds
+2016/08/25 18:11:31 fcoelho> status -nu glob:../shi**
+2016/08/25 18:11:31 fcoelho> status -nu glob:../shi** exited 0 after 0.03 seconds
+2016/08/25 18:11:32 fcoelho> add ../shimcontrol/util.py
+2016/08/25 18:11:32 fcoelho> add ../shimcontrol/util.py exited 0 after 0.03 seconds
+2016/08/25 18:11:33 fcoelho> st
+2016/08/25 18:11:33 fcoelho> st exited 0 after 0.03 seconds
+2016/08/25 18:11:35 fcoelho> diff
+2016/08/25 18:11:35 fcoelho> diff exited 0 after 0.05 seconds
+2016/08/25 18:11:44 fcoelho> ci -m 'adiciona comando pra reportar tempos do adc'
+2016/08/25 18:11:44 fcoelho> updated served branch cache in 0.0009 seconds
+2016/08/25 18:11:44 fcoelho> wrote served branch cache with 1 labels and 1 nodes
+2016/08/25 18:11:44 fcoelho> ci -m 'adiciona comando pra reportar tempos do adc' exited 0 after 0.06 seconds
+2016/08/25 18:11:46 fcoelho> push
+2016/08/25 18:11:57 fcoelho> updated None branch cache in 0.0004 seconds
+2016/08/25 18:11:59 fcoelho> push exited 0 after 13.67 seconds
+2016/08/28 02:39:47 fcoelho> st
+2016/08/28 02:39:47 fcoelho> st exited 0 after 0.13 seconds
+2016/08/28 02:39:50 fcoelho> diff
+2016/08/28 02:39:50 fcoelho> diff exited 0 after 0.20 seconds
+2016/08/28 02:40:04 fcoelho> ci --interactive
+2016/08/28 02:40:45 fcoelho> ci --interactive exited -1 after 40.79 seconds
+2016/08/28 02:40:49 fcoelho> showconfig alias.ci
+2016/08/28 02:40:49 fcoelho> showconfig alias.ci exited 1 after 0.02 seconds
+2016/08/28 02:40:49 fcoelho> status -nmar glob:shim**
+2016/08/28 02:40:49 fcoelho> status -nmar glob:shim** exited 0 after 0.04 seconds
+2016/08/28 02:40:50 fcoelho> showconfig alias.ci
+2016/08/28 02:40:50 fcoelho> showconfig alias.ci exited 1 after 0.02 seconds
+2016/08/28 02:40:50 fcoelho> status -nmar glob:shimcontrol/cl**
+2016/08/28 02:40:50 fcoelho> status -nmar glob:shimcontrol/cl** exited 0 after 0.03 seconds
+2016/08/28 02:40:50 fcoelho> ci shimcontrol/cli.py
+2016/08/28 02:41:22 fcoelho> updated served branch cache in 0.0110 seconds
+2016/08/28 02:41:22 fcoelho> wrote served branch cache with 1 labels and 1 nodes
+2016/08/28 02:41:22 fcoelho> ci shimcontrol/cli.py exited 0 after 32.43 seconds
+2016/08/28 02:41:24 fcoelho> st
+2016/08/28 02:41:24 fcoelho> st exited 0 after 0.04 seconds
+2016/08/28 02:41:25 fcoelho> diff
+2016/08/28 02:41:25 fcoelho> diff exited 0 after 0.05 seconds
+2016/08/28 02:41:34 fcoelho> ci -m 'testa performance dos dacs'
+2016/08/28 02:41:34 fcoelho> updated served branch cache in 0.0010 seconds
+2016/08/28 02:41:34 fcoelho> wrote served branch cache with 1 labels and 1 nodes
+2016/08/28 02:41:34 fcoelho> ci -m 'testa performance dos dacs' exited 0 after 0.05 seconds
+2016/08/28 02:41:38 fcoelho> push
+2016/08/28 02:41:49 fcoelho> updated None branch cache in 0.0008 seconds
+2016/08/28 02:41:50 fcoelho> push exited -1 after 11.27 seconds
+2016/08/28 02:41:50 fcoelho> push
+2016/08/28 02:42:01 fcoelho> updated None branch cache in 0.0004 seconds
+2016/08/28 02:42:01 fcoelho> push exited -1 after 11.22 seconds
+2016/08/28 02:42:01 fcoelho> push
+2016/08/28 02:42:12 fcoelho> updated None branch cache in 0.0005 seconds
+2016/08/28 02:42:15 fcoelho> push exited 0 after 13.78 seconds
+2016/08/28 03:49:21 fcoelho> st
+2016/08/28 03:49:21 fcoelho> st exited 0 after 0.45 seconds
+2016/08/28 03:49:23 fcoelho> pull -u
+2016/08/28 03:49:35 fcoelho> updated served branch cache in 0.0225 seconds
+2016/08/28 03:49:35 fcoelho> wrote served branch cache with 1 labels and 1 nodes
+2016/08/28 03:49:35 fcoelho> 2 incoming changes - new heads: ed0954b14392
+2016/08/28 03:49:36 fcoelho> pull -u exited 0 after 12.62 seconds
+2016/08/28 14:51:00 fcoelho> pull
+2016/08/28 14:51:14 fcoelho> pull exited 0 after 14.53 seconds
+2016/08/28 14:58:12 fcoelho> pull -u
+2016/08/28 14:58:26 fcoelho> pull -u exited 0 after 13.48 seconds
+2016/08/29 17:12:21 fcoelho> showconfig alias.mv
+2016/08/29 17:12:21 fcoelho> showconfig alias.mv exited 1 after 0.04 seconds
+2016/08/29 17:12:21 fcoelho> showconfig alias.rename
+2016/08/29 17:12:21 fcoelho> showconfig alias.rename exited 1 after 0.02 seconds
+2016/08/29 17:12:24 fcoelho> showconfig alias.mv
+2016/08/29 17:12:24 fcoelho> showconfig alias.mv exited 1 after 0.02 seconds
+2016/08/29 17:12:24 fcoelho> showconfig alias.rename
+2016/08/29 17:12:24 fcoelho> showconfig alias.rename exited 1 after 0.02 seconds
+2016/08/29 17:12:35 fcoelho> mv ui/ shimcontrol/
+2016/08/29 17:12:36 fcoelho> mv ui/ shimcontrol/ exited 0 after 0.24 seconds
+2016/08/29 17:14:18 fcoelho> mv docker Dockerfile manage.py requirements.txt shimcontrol website ..
+2016/08/29 17:14:18 fcoelho> mv docker Dockerfile manage.py requirements.txt shimcontrol website .. exited 0 after 0.04 seconds
+2016/08/29 17:14:53 fcoelho> showconfig alias.rm
+2016/08/29 17:14:53 fcoelho> showconfig alias.rm exited 1 after 0.02 seconds
+2016/08/29 17:14:53 fcoelho> debugpathcomplete -n ui
+2016/08/29 17:14:53 fcoelho> debugpathcomplete -n ui exited 0 after 0.02 seconds
+2016/08/29 17:14:54 fcoelho> rm ui/
+2016/08/29 17:14:54 fcoelho> rm ui/ exited 1 after 0.10 seconds
+2016/08/29 17:14:57 fcoelho> st
+2016/08/29 17:14:58 fcoelho> st exited 0 after 0.89 seconds
+2016/08/29 17:16:08 fcoelho> st
+2016/08/29 17:16:08 fcoelho> st exited 0 after 0.03 seconds
+2016/08/29 17:16:12 fcoelho> diff
+2016/08/29 17:16:12 fcoelho> diff exited 0 after 0.18 seconds
+2016/08/29 17:16:19 fcoelho> showconfig alias.diff
+2016/08/29 17:16:19 fcoelho> showconfig alias.diff exited 1 after 0.02 seconds
+2016/08/29 17:16:19 fcoelho> status -nmar glob:shimcon**
+2016/08/29 17:16:19 fcoelho> status -nmar glob:shimcon** exited 0 after 0.03 seconds
+2016/08/29 17:16:21 fcoelho> diff shimcontrol/
+2016/08/29 17:16:21 fcoelho> diff shimcontrol/ exited 0 after 0.06 seconds
+2016/08/29 17:16:39 fcoelho> st
+2016/08/29 17:16:39 fcoelho> st exited 0 after 0.04 seconds
+2016/08/29 17:16:42 fcoelho> showconfig alias.diff
+2016/08/29 17:16:42 fcoelho> showconfig alias.diff exited 1 after 0.02 seconds
+2016/08/29 17:16:42 fcoelho> status -nmar glob:cli**
+2016/08/29 17:16:42 fcoelho> status -nmar glob:cli** exited 0 after 0.03 seconds
+2016/08/29 17:16:42 fcoelho> diff cli.py
+2016/08/29 17:16:42 fcoelho> diff cli.py exited 0 after 0.04 seconds
+2016/08/29 17:16:45 fcoelho> showconfig alias.diff
+2016/08/29 17:16:45 fcoelho> showconfig alias.diff exited 1 after 0.02 seconds
+2016/08/29 17:16:45 fcoelho> status -nmar glob:li**
+2016/08/29 17:16:45 fcoelho> status -nmar glob:li** exited 0 after 0.03 seconds
+2016/08/29 17:16:46 fcoelho> diff lib.py
+2016/08/29 17:16:46 fcoelho> diff lib.py exited 0 after 0.04 seconds
+2016/08/29 17:16:49 fcoelho> showconfig alias.ci
+2016/08/29 17:16:49 fcoelho> showconfig alias.ci exited 1 after 0.02 seconds
+2016/08/29 17:16:49 fcoelho> status -nmar glob:li**
+2016/08/29 17:16:49 fcoelho> status -nmar glob:li** exited 0 after 0.03 seconds
+2016/08/29 17:16:50 fcoelho> showconfig alias.ci
+2016/08/29 17:16:50 fcoelho> showconfig alias.ci exited 1 after 0.02 seconds
+2016/08/29 17:16:50 fcoelho> status -nmar glob:cli**
+2016/08/29 17:16:50 fcoelho> status -nmar glob:cli** exited 0 after 0.03 seconds
+2016/08/29 17:16:50 fcoelho> ci lib.py cli.py
+2016/08/29 17:17:02 fcoelho> updated served branch cache in 0.0123 seconds
+2016/08/29 17:17:02 fcoelho> wrote served branch cache with 1 labels and 1 nodes
+2016/08/29 17:17:02 fcoelho> ci lib.py cli.py exited 0 after 11.65 seconds
+2016/08/29 17:18:22 fcoelho> st
+2016/08/29 17:18:22 fcoelho> st exited 0 after 0.03 seconds
+2016/08/29 17:18:28 fcoelho> ci -m 'move ui pra dentro de shimcontrol'
+2016/08/29 17:18:28 fcoelho> updated served branch cache in 0.0008 seconds
+2016/08/29 17:18:28 fcoelho> wrote served branch cache with 1 labels and 1 nodes
+2016/08/29 17:18:28 fcoelho> ci -m 'move ui pra dentro de shimcontrol' exited 0 after 0.06 seconds
+2016/08/29 17:18:35 fcoelho> showconfig alias.mv
+2016/08/29 17:18:35 fcoelho> showconfig alias.mv exited 1 after 0.02 seconds
+2016/08/29 17:18:35 fcoelho> showconfig alias.rename
+2016/08/29 17:18:35 fcoelho> showconfig alias.rename exited 1 after 0.02 seconds
+2016/08/29 17:27:22 fcoelho> showconfig alias.mv
+2016/08/29 17:27:22 fcoelho> showconfig alias.mv exited 1 after 0.02 seconds
+2016/08/29 17:27:22 fcoelho> showconfig alias.rename
+2016/08/29 17:27:22 fcoelho> showconfig alias.rename exited 1 after 0.02 seconds
+2016/08/29 17:27:25 fcoelho> mv website api
+2016/08/29 17:27:25 fcoelho> mv website api exited 0 after 0.04 seconds
+2016/08/29 17:27:27 fcoelho> st
+2016/08/29 17:27:27 fcoelho> st exited 0 after 0.03 seconds
+2016/08/29 17:27:31 fcoelho> ci -m 'renomeia pra api'
+2016/08/29 17:27:31 fcoelho> updated served branch cache in 0.0009 seconds
+2016/08/29 17:27:31 fcoelho> wrote served branch cache with 1 labels and 1 nodes
+2016/08/29 17:27:31 fcoelho> ci -m 'renomeia pra api' exited 0 after 0.05 seconds
+2016/08/29 17:53:41 fcoelho> log
+2016/08/29 17:53:41 fcoelho> writing .hg/cache/tags2-visible with 0 tags
+2016/08/29 17:53:41 fcoelho> log exited 0 after 0.08 seconds
+2016/08/29 17:57:37 fcoelho> showconfig alias.rm
+2016/08/29 17:57:37 fcoelho> showconfig alias.rm exited 1 after 0.02 seconds
+2016/08/29 17:57:37 fcoelho> debugpathcomplete -n ui
+2016/08/29 17:57:37 fcoelho> debugpathcomplete -n ui exited 0 after 0.02 seconds
+2016/08/29 17:57:38 fcoelho> rm ui/requirements.txt
+2016/08/29 17:57:38 fcoelho> rm ui/requirements.txt exited 0 after 0.04 seconds
+2016/08/29 17:57:39 fcoelho> st
+2016/08/29 17:57:39 fcoelho> st exited 0 after 0.03 seconds
+2016/08/29 17:57:45 fcoelho> showconfig alias.mv
+2016/08/29 17:57:45 fcoelho> showconfig alias.mv exited 1 after 0.02 seconds
+2016/08/29 17:57:45 fcoelho> showconfig alias.rename
+2016/08/29 17:57:45 fcoelho> showconfig alias.rename exited 1 after 0.02 seconds
+2016/08/29 17:57:55 fcoelho> showconfig alias.mv
+2016/08/29 17:57:55 fcoelho> showconfig alias.mv exited 1 after 0.02 seconds
+2016/08/29 17:57:55 fcoelho> showconfig alias.rename
+2016/08/29 17:57:55 fcoelho> showconfig alias.rename exited 1 after 0.02 seconds
+2016/08/29 17:58:27 fcoelho> showconfig alias.mv
+2016/08/29 17:58:27 fcoelho> showconfig alias.mv exited 1 after 0.02 seconds
+2016/08/29 17:58:27 fcoelho> showconfig alias.rename
+2016/08/29 17:58:27 fcoelho> showconfig alias.rename exited 1 after 0.02 seconds
+2016/08/29 17:58:29 fcoelho> mv shimcontrol ui
+2016/08/29 17:58:29 fcoelho> mv shimcontrol ui exited 0 after 0.03 seconds
+2016/08/29 17:58:31 fcoelho> st
+2016/08/29 17:58:31 fcoelho> st exited 0 after 0.03 seconds
+2016/08/29 17:58:46 fcoelho> showconfig alias.mv
+2016/08/29 17:58:46 fcoelho> showconfig alias.mv exited 1 after 0.02 seconds
+2016/08/29 17:58:46 fcoelho> showconfig alias.rename
+2016/08/29 17:58:46 fcoelho> showconfig alias.rename exited 1 after 0.02 seconds
+2016/08/29 17:58:48 fcoelho> mv manage.py ..
+2016/08/29 17:58:48 fcoelho> mv manage.py .. exited 0 after 0.03 seconds
+2016/08/29 17:58:49 fcoelho> st
+2016/08/29 17:58:49 fcoelho> st exited 0 after 0.03 seconds
+2016/08/29 17:59:08 fcoelho> showconfig alias.mv
+2016/08/29 17:59:08 fcoelho> showconfig alias.mv exited 1 after 0.02 seconds
+2016/08/29 17:59:08 fcoelho> showconfig alias.rename
+2016/08/29 17:59:08 fcoelho> showconfig alias.rename exited 1 after 0.02 seconds
+2016/08/29 17:59:09 fcoelho> mv docker/ ..
+2016/08/29 17:59:09 fcoelho> mv docker/ .. exited 0 after 0.03 seconds
+2016/08/29 17:59:22 fcoelho> up -C
+2016/08/29 17:59:22 fcoelho> up -C exited 0 after 0.04 seconds
+2016/08/29 17:59:23 fcoelho> st
+2016/08/29 17:59:23 fcoelho> st exited 0 after 0.04 seconds
+2016/08/29 17:59:29 fcoelho> up -C
+2016/08/29 17:59:29 fcoelho> up -C exited 0 after 0.04 seconds
+2016/08/29 17:59:30 fcoelho> clean
+2016/08/29 17:59:30 fcoelho> clean exited 0 after 0.03 seconds
+2016/08/29 17:59:32 fcoelho> st
+2016/08/29 17:59:32 fcoelho> st exited 0 after 0.03 seconds
+2016/08/29 18:14:13 fcoelho> showconfig alias.mv
+2016/08/29 18:14:13 fcoelho> showconfig alias.mv exited 1 after 0.02 seconds
+2016/08/29 18:14:13 fcoelho> showconfig alias.rename
+2016/08/29 18:14:13 fcoelho> showconfig alias.rename exited 1 after 0.02 seconds
+2016/08/29 18:14:19 fcoelho> showconfig alias.mv
+2016/08/29 18:14:19 fcoelho> showconfig alias.mv exited 1 after 0.02 seconds
+2016/08/29 18:14:19 fcoelho> showconfig alias.rename
+2016/08/29 18:14:19 fcoelho> showconfig alias.rename exited 1 after 0.02 seconds
+2016/08/29 18:14:22 fcoelho> mv manage.py docker/ ..
+2016/08/29 18:14:22 fcoelho> mv manage.py docker/ .. exited 0 after 0.03 seconds
+2016/08/29 18:14:30 fcoelho> showconfig alias.rm
+2016/08/29 18:14:30 fcoelho> showconfig alias.rm exited 1 after 0.02 seconds
+2016/08/29 18:14:30 fcoelho> debugpathcomplete -n ui
+2016/08/29 18:14:30 fcoelho> debugpathcomplete -n ui exited 0 after 0.02 seconds
+2016/08/29 18:14:30 fcoelho> rm ui/requirements.txt
+2016/08/29 18:14:30 fcoelho> rm ui/requirements.txt exited 0 after 0.04 seconds
+2016/08/29 18:14:31 fcoelho> st
+2016/08/29 18:14:31 fcoelho> st exited 0 after 0.03 seconds
+2016/08/29 18:14:34 fcoelho> showconfig alias.mv
+2016/08/29 18:14:34 fcoelho> showconfig alias.mv exited 1 after 0.02 seconds
+2016/08/29 18:14:34 fcoelho> showconfig alias.rename
+2016/08/29 18:14:34 fcoelho> showconfig alias.rename exited 1 after 0.02 seconds
+2016/08/29 18:14:37 fcoelho> mv shimcontrol ui
+2016/08/29 18:14:37 fcoelho> mv shimcontrol ui exited 0 after 0.03 seconds
+2016/08/29 18:16:37 fcoelho> showconfig alias.mv
+2016/08/29 18:16:37 fcoelho> showconfig alias.mv exited 1 after 0.02 seconds
+2016/08/29 18:16:37 fcoelho> showconfig alias.rename
+2016/08/29 18:16:37 fcoelho> showconfig alias.rename exited 1 after 0.02 seconds
+2016/08/29 18:16:38 fcoelho> showconfig alias.mv
+2016/08/29 18:16:38 fcoelho> showconfig alias.mv exited 1 after 0.02 seconds
+2016/08/29 18:16:38 fcoelho> showconfig alias.rename
+2016/08/29 18:16:38 fcoelho> showconfig alias.rename exited 1 after 0.02 seconds
+2016/08/29 18:16:40 fcoelho> mv shimcontrol/requirements.txt .
+2016/08/29 18:16:40 fcoelho> mv shimcontrol/requirements.txt . exited 0 after 0.03 seconds
+2016/08/29 18:16:40 fcoelho> st
+2016/08/29 18:16:40 fcoelho> st exited 0 after 0.03 seconds
+2016/08/29 18:18:41 fcoelho> st
+2016/08/29 18:18:41 fcoelho> st exited 0 after 0.03 seconds
+2016/08/29 18:18:50 fcoelho> ci -m 'move pacotes pra lugares melhores'
+2016/08/29 18:18:51 fcoelho> updated served branch cache in 0.0008 seconds
+2016/08/29 18:18:51 fcoelho> wrote served branch cache with 1 labels and 1 nodes
+2016/08/29 18:18:51 fcoelho> ci -m 'move pacotes pra lugares melhores' exited 0 after 0.06 seconds
+2016/08/29 18:51:42 fcoelho> st
+2016/08/29 18:51:42 fcoelho> st exited 0 after 0.03 seconds
+2016/08/29 18:51:45 fcoelho> diff
+2016/08/29 18:51:45 fcoelho> diff exited 0 after 0.04 seconds
+2016/08/29 18:54:01 fcoelho> st
+2016/08/29 18:54:01 fcoelho> st exited 0 after 0.03 seconds
+2016/08/29 18:54:02 fcoelho> diff
+2016/08/29 18:54:03 fcoelho> diff exited 0 after 0.05 seconds
+2016/08/29 18:54:08 fcoelho> ci -m 'implementa views'
+2016/08/29 18:54:08 fcoelho> updated served branch cache in 0.0008 seconds
+2016/08/29 18:54:08 fcoelho> wrote served branch cache with 1 labels and 1 nodes
+2016/08/29 18:54:08 fcoelho> ci -m 'implementa views' exited 0 after 0.05 seconds
+2016/08/29 18:55:03 fcoelho> st
+2016/08/29 18:55:03 fcoelho> st exited 0 after 0.03 seconds
+2016/08/29 18:59:23 fcoelho> st
+2016/08/29 18:59:23 fcoelho> st exited 0 after 0.03 seconds
+2016/08/29 18:59:24 fcoelho> diff
+2016/08/29 18:59:24 fcoelho> diff exited 0 after 0.05 seconds
+2016/08/29 19:59:43 fcoelho> showconfig alias.mv
+2016/08/29 19:59:43 fcoelho> showconfig alias.mv exited 1 after 0.13 seconds
+2016/08/29 19:59:43 fcoelho> showconfig alias.rename
+2016/08/29 19:59:43 fcoelho> showconfig alias.rename exited 1 after 0.02 seconds
+2016/08/29 19:59:44 fcoelho> showconfig alias.mv
+2016/08/29 19:59:44 fcoelho> showconfig alias.mv exited 1 after 0.02 seconds
+2016/08/29 19:59:44 fcoelho> showconfig alias.rename
+2016/08/29 19:59:44 fcoelho> showconfig alias.rename exited 1 after 0.02 seconds
+2016/08/29 19:59:46 fcoelho> showconfig alias.mv
+2016/08/29 19:59:46 fcoelho> showconfig alias.mv exited 1 after 0.02 seconds
+2016/08/29 19:59:46 fcoelho> showconfig alias.rename
+2016/08/29 19:59:46 fcoelho> showconfig alias.rename exited 1 after 0.02 seconds
+2016/08/29 19:59:47 fcoelho> mv shimcontrol/uwsgi.ini .
+2016/08/29 19:59:47 fcoelho> mv shimcontrol/uwsgi.ini . exited -1 after 0.06 seconds
+2016/08/29 20:01:59 fcoelho> st
+2016/08/29 20:01:59 fcoelho> st exited 0 after 0.06 seconds
+2016/08/29 20:02:01 fcoelho> showconfig alias.add
+2016/08/29 20:02:01 fcoelho> showconfig alias.add exited 1 after 0.02 seconds
+2016/08/29 20:02:01 fcoelho> status -nu glob:ansi**
+2016/08/29 20:02:01 fcoelho> status -nu glob:ansi** exited 0 after 0.03 seconds
+2016/08/29 20:02:04 fcoelho> add ansible.cfg
+2016/08/29 20:02:04 fcoelho> add ansible.cfg exited 0 after 0.03 seconds
+2016/08/29 20:02:21 fcoelho> add .
+2016/08/29 20:02:21 fcoelho> add . exited 0 after 0.03 seconds
+2016/08/29 20:02:22 fcoelho> st
+2016/08/29 20:02:22 fcoelho> st exited 0 after 0.03 seconds
+2016/08/29 20:02:24 fcoelho> diff
+2016/08/29 20:02:24 fcoelho> diff exited 0 after 0.06 seconds
+2016/08/29 20:02:33 fcoelho> ci -m 'inicia servi\xc3\xa7o uwsgi'
+2016/08/29 20:02:33 fcoelho> updated served branch cache in 0.0013 seconds
+2016/08/29 20:02:33 fcoelho> wrote served branch cache with 1 labels and 1 nodes
+2016/08/29 20:02:33 fcoelho> ci -m 'inicia servi\xc3\xa7o uwsgi' exited 0 after 0.06 seconds
+2016/08/29 20:06:53 fcoelho> st
+2016/08/29 20:06:53 fcoelho> st exited 0 after 0.03 seconds
+2016/08/29 20:10:24 fcoelho> push
+2016/08/29 20:10:35 fcoelho> updated None branch cache in 0.0005 seconds
+2016/08/29 20:10:37 fcoelho> push exited 0 after 13.14 seconds
+2016/08/29 20:16:29 fcoelho> mv ansible/shimcontrol.yml .
+2016/08/29 20:16:29 fcoelho> mv ansible/shimcontrol.yml . exited 0 after 0.03 seconds
+2016/08/29 20:16:34 fcoelho> showconfig alias.mv
+2016/08/29 20:16:34 fcoelho> showconfig alias.mv exited 1 after 0.02 seconds
+2016/08/29 20:16:34 fcoelho> showconfig alias.rename
+2016/08/29 20:16:34 fcoelho> showconfig alias.rename exited 1 after 0.02 seconds
+2016/08/29 20:16:35 fcoelho> showconfig alias.mv
+2016/08/29 20:16:35 fcoelho> showconfig alias.mv exited 1 after 0.02 seconds
+2016/08/29 20:16:35 fcoelho> showconfig alias.rename
+2016/08/29 20:16:35 fcoelho> showconfig alias.rename exited 1 after 0.02 seconds
+2016/08/29 20:16:36 fcoelho> mv ansible/ansible.cfg .
+2016/08/29 20:16:36 fcoelho> mv ansible/ansible.cfg . exited 0 after 0.03 seconds
+2016/08/29 20:16:38 fcoelho> showconfig alias.mv
+2016/08/29 20:16:38 fcoelho> showconfig alias.mv exited 1 after 0.02 seconds
+2016/08/29 20:16:38 fcoelho> showconfig alias.rename
+2016/08/29 20:16:38 fcoelho> showconfig alias.rename exited 1 after 0.02 seconds
+2016/08/29 20:16:40 fcoelho> showconfig alias.mv
+2016/08/29 20:16:40 fcoelho> showconfig alias.mv exited 1 after 0.02 seconds
+2016/08/29 20:16:40 fcoelho> showconfig alias.rename
+2016/08/29 20:16:40 fcoelho> showconfig alias.rename exited 1 after 0.02 seconds
+2016/08/29 20:16:41 fcoelho> mv ansible/hosts .
+2016/08/29 20:16:41 fcoelho> mv ansible/hosts . exited 0 after 0.04 seconds
+2016/08/30 05:12:52 fcoelho> st
+2016/08/30 05:12:52 fcoelho> st exited 0 after 0.03 seconds
+2016/08/30 05:12:54 fcoelho> diff
+2016/08/30 05:12:54 fcoelho> diff exited 0 after 0.05 seconds
+2016/08/30 05:13:08 fcoelho> ci -m 'move coisas de lugar de novo'
+2016/08/30 05:13:08 fcoelho> updated served branch cache in 0.0010 seconds
+2016/08/30 05:13:08 fcoelho> wrote served branch cache with 1 labels and 1 nodes
+2016/08/30 05:13:08 fcoelho> ci -m 'move coisas de lugar de novo' exited 0 after 0.05 seconds
+2016/08/30 05:13:09 fcoelho> st
+2016/08/30 05:13:09 fcoelho> st exited 0 after 0.03 seconds
+2016/08/30 05:14:06 fcoelho> push
+2016/08/30 05:14:17 fcoelho> updated None branch cache in 0.0006 seconds
+2016/08/30 05:14:19 fcoelho> push exited 0 after 13.07 seconds
+2016/08/30 06:24:33 fcoelho> st
+2016/08/30 06:24:33 fcoelho> st exited 0 after 0.03 seconds
+2016/08/30 06:24:34 fcoelho> diff
+2016/08/30 06:24:34 fcoelho> diff exited 0 after 0.04 seconds
+2016/08/30 06:24:43 fcoelho> ci
+2016/08/30 06:25:19 fcoelho> updated served branch cache in 0.0009 seconds
+2016/08/30 06:25:19 fcoelho> wrote served branch cache with 1 labels and 1 nodes
+2016/08/30 06:25:19 fcoelho> ci exited 0 after 36.53 seconds
+2016/08/30 06:25:22 fcoelho> st
+2016/08/30 06:25:22 fcoelho> st exited 0 after 0.03 seconds
+2016/08/30 06:36:41 fcoelho> st
+2016/08/30 06:36:41 fcoelho> st exited 0 after 0.03 seconds
+2017/03/15 14:51:04 fcoelho> st
+2017/03/15 14:51:04 fcoelho> st exited 0 after 0.34 seconds
+2017/03/15 14:51:05 fcoelho> log
+2017/03/15 14:51:05 fcoelho> writing .hg/cache/tags2-visible with 0 tags
+2017/03/15 14:51:05 fcoelho> log exited 0 after 0.12 seconds
